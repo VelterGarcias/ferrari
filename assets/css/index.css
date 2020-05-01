@@ -1,0 +1,46 @@
+/* HCODEWELCOMEMAY  */
+@import 'reset.css';
+@import 'open-sans.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'home.css';
+ 
+
+main {
+    min-height: calc(100vh - 463px);
+}
+
+/* Aqui começa a Header */
+
+
+/* Aqui termina o Header */
+
+
+/* Aqui comeeça o footer */
+
+
+
+/* Aqui termina o footer */
+
+
+
+
+/* tablet ou celular deitado */
+@media (min-width: 576px) {
+
+}
+
+/* desktop */
+@media (min-width: 768px) {
+    
+}
+
+/* large desktop */
+@media (min-width: 992px) {
+    
+}
+
+/* extra large desktop */
+@media (min-width: 1200px) {
+    
+}
