@@ -4,24 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hcode - Ferrari</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 <body>
-    <header class="top-site">
+    <header id="header">
+        <div id="overlay" data-close="menu"></div>
         <img id="logo" src="assets/images/ferrari-logo.svg" alt="logo">
-        <button type="button">
+
+        <button id="btn-open" type="button">
             <img src="assets/images/menu-black-18dp.svg" alt="menu">
         </button>
-        <hr>
+        <nav class="menu">
+            <div>
+                <button type="button" id="btn-close" data-close='menu'>
+                    <img src="/assets/images/close-black-18dp.svg" alt="close">
+                </button>
+
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/our-history.html">Nossa História</a></li>
+                    <li><a href="/gallery.html">Galeria</a></li>
+                    <li><a href="/contact.html">Contato</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btn-register">
+                Registre-se / Login
+            </button>
+        </nav>
+
     </header>
-    <main>
+
+
+    <main id="login" class="page">
+        
+
+        <header>
+            <div class="mask">
+                <h1>Login</h1>
+            </div>
+        </header>
+
+        <hr class="italy">
+        
 
     </main>
-    <footer>
+    <footer id="footer">
         <button type="button">
             <img src="assets/images/icon-arrow-up.svg" alt="up">
         </button>
-        <lu>
+        <ul>
             <li class="title">
                 Contato
             </li>
@@ -34,11 +65,13 @@
                 <a href="https://www.youtube.com/user/ferrariworld"><img src="assets/images/index/youtube.svg" alt="youtube"></a>
                 <a href="https://www.instagram.com/ferrari"><img src="assets/images/index/instagram.svg" alt="instagram"></a>
             </li>
-        </lu>
+        </ul>
         <img src="assets/images/index/ferrari-footer.svg" alt="Logo" class="logo">
         <p>
             2020 © Hcode. All rights reserved.
         </p>
     </footer>
+
+    <script type="text/javascript" src="javascript/index.js"></script>
 </body>
 </html>
