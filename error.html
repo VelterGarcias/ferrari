@@ -35,42 +35,28 @@
     </header>
 
 
-    <main id="login" class="page">
-        
+    <main id="error" class="page">
+      
+        <hr class="italy"/>
 
-        <header>
-            <div class="mask">
-                <h1>Login</h1>
+        <div class="columns">
+            <div class="column">
+                <header>
+                    <h1>
+                        <span class="show-desktop"><b>Uno</b>&nbsp; problema ocorrido!</span>
+                        <span class="hide-desktop">Problema ocorrido no <b>Mo</b>bile</span>
+                    </h1>
+                </header>
             </div>
-        </header>
-
-        <hr class="italy">
-        
-        <section>
-
-            <div class="image"></div>
-
-            <form >
-                <div>
-                    <div class="fields">
-                        <div class="field"><label for="email">Email</label>
-                            <input type="email" name="name" id="email">
-                        </div>
-                        <div class="field"><label for="password">Senha</label>
-                            <input type="password" name="password" id="password">
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <button type="submit">Entrar</button>
-                        <a href="#">Esqueci a senha</a>
-                </div>
+            <div class="column">
+                <picture>
+                    <source srcset="assets/images/uno.png" media="(min-width: 1100px)" />
+                    <source srcset="assets/images/mobi@2x.png" media="(min-width: 480px)" />
+                    <img src="assets/images/mobi.png" alt="Mobi">
+                </picture>
             </div>
-            <p>Você ainda não tem conta, <a href="/register.html">clique aqui</a> e cadastre-se.</p>
-            </form>
-        </section>
-
-
-
+        </div>
+        
     </main>
     <footer id="footer">
         <button type="button">
