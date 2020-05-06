@@ -133,13 +133,31 @@ a {
     color: var(--red);
 }
 
-a {
+a:hover {
     color: var(--black);
 }
 
+.show-desktop {
+    display: none;
+}
 
+/* Daqui para cima é tudo celular */
 @media (min-width: 576px) {
     .page header {
         height: 45vh;
+    }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+    .show-desktop {
+        display: flex;
+    }
+
+    .hide-desktop {
+        display: none;
     }
 }
