@@ -27,9 +27,9 @@
                     <li><a href="/contact.html">Contato</a></li>
                 </ul>
             </div>
-            <button type="button" class="btn-register">
+            <a href="register.html" class="btn-register">
                 Registre-se / Login
-            </button>
+            </a>
         </nav>
 
     </header>
@@ -37,33 +37,42 @@
 
     <main id="contact" class="page">
         
+        <div class="page-header">
 
-        <header>
-            <div class="mask">
-                <h1>Fale Conosco</h1>
-            </div>
-        </header>
+            <header>
+                
+                    <h1>
+                        <span class="show-desktop">Fale Conosco</span>
+                        <span class="hide-desktop">Contato</span>
+                    </h1>
+            </header>
+    
+            <hr class="italy">
 
-        <hr class="italy">
+        </div>
         <section>
             <form >
-                <div class="field">
-                    <label for="name">Nome</label>
-                    <input type="text" name="name" id="name" placeholder="Digite o Nome">
+                <div class="fields">
+
+                    <div class="field">
+                        <input type="text" name="name" id="name" placeholder="Digite o Nome">
+                        <label for="name">Nome</label>
+                    </div>
+                    <div class="field">
+                        <input type="email" id="email" placeholder="email@email.com">
+                        <label for="email">E-mail</label>
+                    </div>
+
                 </div>
                 <div class="field">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="email@email.com">
-                </div>
-                <div class="field">
-                    <label for="message">Mensagem</label>
                     <textarea class="message" id="message"></textarea>
+                    <label for="message">Mensagem</label>
                 </div>
                 <button type="submit">Enviar</button>
             </form>
             <div id="map"></div>
         </section>
-        <hr/>
+        <hr class="divider"/>
         <ul class="contacts">
             <li>
                 <img src="/assets/images/google-place.svg" alt="Icon">
@@ -99,36 +108,43 @@
         </button>
 
         <div class="columns">
-            <ul class="links">
-                <li class="title">Links</li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/our-history.html">Nossa História</a></li>
-                <li><a href="/gallery.html">Galeria</a></li>
-                <li><a href="/contact.html">Contato</a></li>
-            </ul>
-            
-            <ul>
-                <li class="title">
-                    Contato
-                </li>
-                <li>E-mail:
-                    support@ferrari.it
-                </li>
-                <li class="social">
-                    <a href="https://www.facebook.com/Ferrari"><img src="assets/images/index/facebook.svg" alt="facebook"></a>
-                    <a href="https://twitter.com/Ferrari"><img src="assets/images/index/twitter.svg" alt="twitter"></a>
-                    <a href="https://www.youtube.com/user/ferrariworld"><img src="assets/images/index/youtube.svg" alt="youtube"></a>
-                    <a href="https://www.instagram.com/ferrari"><img src="assets/images/index/instagram.svg" alt="instagram"></a>
-                </li>
-            </ul>
+            <div>
+
+                <ul class="links">
+                    <li class="title">Links</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/our-history.html">Nossa História</a></li>
+                    <li><a href="/gallery.html">Galeria</a></li>
+                    <li><a href="/contact.html">Contato</a></li>
+                </ul>
+                
+                <ul>
+                    <li class="title">
+                        Contato
+                    </li>
+                    <li>E-mail:
+                        support@ferrari.it
+                    </li>
+                    <li class="social">
+                        <a href="https://www.facebook.com/Ferrari"><img src="assets/images/index/facebook.svg" alt="facebook"></a>
+                        <a href="https://twitter.com/Ferrari"><img src="assets/images/index/twitter.svg" alt="twitter"></a>
+                        <a href="https://www.youtube.com/user/ferrariworld"><img src="assets/images/index/youtube.svg" alt="youtube"></a>
+                        <a href="https://www.instagram.com/ferrari"><img src="assets/images/index/instagram.svg" alt="instagram"></a>
+                    </li>
+                </ul>
+
+            </div>
+            <a href="/"><img src="assets/images/index/ferrari-footer.svg" alt="Logo" class="logo"></a>
         </div>
 
-        <img src="assets/images/index/ferrari-footer.svg" alt="Logo" class="logo">
+
         <p>
             2020 © Hcode. All rights reserved.
         </p>
     </footer>
 
     <script type="text/javascript" src="javascript/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp3FUs14NrHt8HKCRz3KH3YsEwaHV3LIs&callback=initMap"
+    ></script>
 </body>
 </html>

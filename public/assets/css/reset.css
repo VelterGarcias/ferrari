@@ -3,6 +3,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure {
@@ -21,7 +22,7 @@ hr.italy {
     background-image: url('/assets/images/bg-italy.svg');
     background-repeat: repeat-x;
     width: 100%;
-    height: 20px;
+    height: 18px;
     margin: 0;
     border: none;
 }
@@ -39,11 +40,7 @@ hr.italy {
     height: 210px;
     width: 100%;
     background-size: cover;
-}
-
-.page header .mask {
-    width: 100%;
-    background-color: var(--black50);
+    filter: brightness(0.5);
     flex-direction: column;
     justify-content: flex-end;
     color: var(--white);
@@ -68,30 +65,47 @@ form .fields {
 
  form .field {
     position: relative;
-    border: var(--grayC) 2px solid;
-    border-radius: 5px;
     flex-direction: column;
     width: 100%;
     margin-bottom: 1em;
-    padding: 10px;
 }
 
  form .field label {
     color: var(--grayC);
     font-size: 14px;
-
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+    transition: color .3s ease-in-out;
 }
 
  form .field input,
  form .field textarea {
     line-height: 1.5em;
-    padding: 0.25em 0;
+    padding: 10px;
+    padding-top: 30px;
     font-size: 16px;
     font-weight: 700;
-    color: var(--gray5);
-    border: none;
     outline: none;
+    color: var(--gray5);
+    border: var(--grayC) 2px solid;
     font-family: 'Open Sans';
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    transition: border-color .3s ease-in-out;
+}
+
+form .field input:focus,
+form .field textarea:focus {
+    border-color: var(--green);
+}
+
+form .field input:focus + label,
+form .field textarea:focus + label {
+    color: var(--green);
 }
 
 form .actions {
@@ -141,14 +155,57 @@ a:hover {
     display: none;
 }
 
-/* Daqui para cima é tudo celular */
+/* Daqui para cima é tudo celular - Mobile First */
 @media (min-width: 576px) {
     .page header {
         height: 45vh;
+        min-height: 300px;
     }
 }
 
 @media (min-width: 992px) {
+    .page .page-header {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .page header {
+        filter: none;
+        align-items: flex-end;
+    }
+
+    .page header li {
+        font-size: 30px;
+    }
+
+    .page header h1 {
+        font-size: 100px;
+        text-shadow: 0 3px 6px var(--black15);
+    }
+
+    form .fields {
+        flex-direction: row;
+    }
+
+    form .fields .field {
+        margin-right: 1em;
+    }
+
+    form .fields .field:last-child {
+        margin-right: 0;
+    }
+
+    form .action a {
+        text-align: right;
+    }
+
+    form .field textarea {
+        min-height: 250px;
+    }
+
+    form button {
+        max-width: 340px;
+    }
 
 }
 
@@ -160,4 +217,41 @@ a:hover {
     .hide-desktop {
         display: none;
     }
+
+
+    @media (prefers-color-scheme: dark) {
+        
+        body { /* Essa parte eu adicionei por conta */
+            background-color: var(--bg-color);
+        }
+
+        .page header {
+            background-color: var(--white50);
+        }
+
+        form .field label {
+            color: var(--gray6);
+        }
+
+        form .field input,
+        form .field textarea {
+            background-color: var(--bg-color);
+            border: var(--gray6) 2px solid;
+            color: var(--gray3);
+        }
+
+        form button {
+            color: var(--black);
+        }
+
+        .page header {
+            color: var(--black);
+        }
+
+        .page header h1 {
+            text-shadow: 0 3px 6px var(--dark);
+        }
+    
+    }
+
 }

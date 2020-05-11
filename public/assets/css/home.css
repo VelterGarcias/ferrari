@@ -4,6 +4,11 @@
 
 }
 
+#home hr {
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+}
 
 #home header {
     width: 100%;
@@ -50,6 +55,11 @@
     position: relative;
     overflow: hidden;
 }
+
+#home .gallery figure img {
+    width: 100%;
+}
+
 
 #home .gallery figure figcaption {
     position: absolute;
@@ -113,7 +123,7 @@
 
 #home .inspiration .car {
     position: absolute;
-    background: url(/assets/images/index/ferrari.png);
+    background: url('/assets/images/index/ferrari.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 684px;
@@ -165,7 +175,7 @@
 
     #home header {
         height: 100vh;
-        min-height: initial;
+        max-height: initial;
         background-image: url('/assets/images/photos/sf90_stradale.jpg@2x.png');
     }
 
@@ -281,4 +291,29 @@
         margin: 0;
         font-size: 16px;
     }
+
+
+    @media (prefers-color-scheme: dark) {
+        #home header h1 {
+            color: var(--black);
+        }
+
+        #home header a {
+            border: var(--black) 2px solid;
+            color: var(--black);
+        }
+
+        #home .inspiration {
+            padding: 0;
+        }
+
+        #home .inspiration > div:first-child {
+            background-color: var(--black);
+        }
+
+        #home .inspiration .text {
+            padding: 3em;
+        }
+    }
+
 }
