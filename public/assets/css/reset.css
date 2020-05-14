@@ -164,6 +164,18 @@ a:hover {
 }
 
 @media (min-width: 992px) {
+
+
+    .show-desktop {
+        display: flex;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+
+    
     .page .page-header {
         width: 100%;
         flex-direction: column-reverse;
@@ -210,13 +222,7 @@ a:hover {
 }
 
 @media (min-width: 1200px) {
-    .show-desktop {
-        display: flex;
-    }
-
-    .hide-desktop {
-        display: none;
-    }
+   
 
 
     @media (prefers-color-scheme: dark) {

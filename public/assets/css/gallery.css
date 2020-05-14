@@ -30,7 +30,8 @@
     }
 
     #gallery.page .photos img {
-        width: 33vw;
-        margin-bottom: 4px;
+        width: 32.9vw;
+        margin:0;
+        padding: 0;
     }
 }
